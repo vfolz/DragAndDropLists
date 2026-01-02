@@ -36,6 +36,9 @@ class DragAndDropListExpansion implements DragAndDropListExpansionInterface {
   @override
   final bool canDrag;
 
+  @override
+  final Key? key;
+
   /// Disable to borders displayed at the top and bottom when expanded
   final bool disableTopAndBottomBorders;
 
@@ -56,6 +59,7 @@ class DragAndDropListExpansion implements DragAndDropListExpansionInterface {
     this.lastTarget,
     required this.listKey,
     this.canDrag = true,
+    this.key,
     this.disableTopAndBottomBorders = false,
   }) {
     _expanded.value = initiallyExpanded;
